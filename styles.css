@@ -6,7 +6,7 @@
 }
 
 :root {
-  --primary-color: #4361ee;
+  --primary-color: #6aa86f;
   --secondary-color: #3a0ca3;
   --success-color: #4cc9f0;
   --warning-color: #f72525;
@@ -48,10 +48,10 @@
 /* Green Theme */
 .theme-green {
     --primary-color: #2a9d8f;
-    --secondary-color: #264653;
+    --secondary-color: #265349;
     --body-bg: #e9f5f3;
     --card-bg: #ffffff;
-    --text-color: #264653;
+    --text-color: #265339;
 }
 
 body {
@@ -117,18 +117,16 @@ p {
 .dark-theme .form-input,
 .dark-theme .form-select,
 .dark-theme .form-textarea {
-  /* TODO: Add dark theme form control styles */
-  /* HINT: Use background-color, color, and border-color */
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
 }
 
 .dark-theme .table th {
-  /* TODO: Add dark theme table header styles */
-  /* HINT: Use background-color */
+  background-color: #3e4c5f;
 }
-
 .dark-theme .code-editor {
-  /* TODO: Add dark theme code editor styles */
-  /* HINT: Use background-color */
+  background-color: #2c3e50;
 }
 
 /* Card Styles */
@@ -238,195 +236,239 @@ p {
 }
 
 .btn-group {
-  /* TODO: Add button group styles */
-  /* HINT: Use display and gap */
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 /* Chip Styles */
 .chips-container {
-  /* TODO: Add chips container styles */
-  /* HINT: Use display, flex-wrap, gap, and margin */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
 }
 
 .chip {
-  /* TODO: Add chip styles */
-  /* HINT: Use display, align-items, padding, background-color, border-radius, font-size, color, and cursor */
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: var(--light-gray-color);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--gray-color);
+  cursor: pointer;
 }
 
 .chip.active {
-  /* TODO: Add active chip styles */
-  /* HINT: Change background-color and color */
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 
 .chip i {
-  /* TODO: Add icon styles within chips */
-  /* HINT: Use margin-right */
+  margin-right: 6px;
 }
 
 .chip .close {
-  /* TODO: Add close button styles within chips */
-  /* HINT: Use margin-left, cursor, and font-weight */
+  margin-left: 8px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 /* Slider Styles */
 .slider-container {
-  /* TODO: Add slider container styles */
-  /* HINT: Use margin */
+  margin: 20px 0;
 }
 
 .slider {
-  /* TODO: Add slider styles */
-  /* HINT: Use appearance, width, height, border-radius, background, and outline */
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: var(--light-gray-color);
+  outline: none;
 }
 
 .slider::-webkit-slider-thumb {
-  /* TODO: Add slider thumb styles */
-  /* HINT: Use appearance, width, height, border-radius, background, cursor, and transition */
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
 .slider::-webkit-slider-thumb:hover {
-  /* TODO: Add hover styles for slider thumb */
-  /* HINT: Use background and transform */
+  background: var(--secondary-color);
+  transform: scale(1.1);
 }
 
 .slider-value {
-  /* TODO: Add slider value styles */
-  /* HINT: Use text-align, font-weight, and color */
+  text-align: center;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-top: 5px;
 }
 
 /* Switch Styles */
 .switch-container {
-  /* TODO: Add switch container styles */
-  /* HINT: Use display, align-items, and margin */
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
 }
 
 .switch {
-  /* TODO: Add switch styles */
-  /* HINT: Use position, display, width, height, and margin-right */
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-right: 10px;
 }
 
 .switch input {
-  /* TODO: Add switch input styles */
-  /* HINT: Use opacity, width, and height */
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider-round {
-  /* TODO: Add slider round styles */
-  /* HINT: Use position, cursor, top/left/right/bottom properties, background-color, transition, and border-radius */
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--gray-color);
+  transition: 0.4s;
+  border-radius: 25px;
 }
 
 .slider-round:before {
-  /* TODO: Add slider round before element styles */
-  /* HINT: Use position, content, height, width, left, bottom, background-color, transition, and border-radius */
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
 }
 
 input:checked + .slider-round {
-  /* TODO: Add checked slider round styles */
-  /* HINT: Change background-color */
+  background-color: var(--primary-color);
 }
 
 input:checked + .slider-round:before {
-  /* TODO: Add checked slider round before element styles */
-  /* HINT: Use transform with translateX */
+  transform: translateX(25px);
 }
 
 /* List Styles */
 .list {
-  /* TODO: Add list styles */
-  /* HINT: Use list-style-type, background-color, border-radius, overflow, and box-shadow */
+  list-style-type: none;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
 }
 
+
 .list-item {
-  /* TODO: Add list item styles */
-  /* HINT: Use padding, border-bottom, display, align-items, cursor, and transition */
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .list-item:last-child {
-  /* TODO: Add styles for last list item */
-  /* HINT: Remove border-bottom */
+  border-bottom: none;
 }
 
 .list-item:hover {
-  /* TODO: Add hover styles for list items */
-  /* HINT: Change background-color */
+  background-color: var(--light-gray-color);
 }
 
 .list-item i {
-  /* TODO: Add icon styles in list items */
-  /* HINT: Use margin-right and color */
+  margin-right: 15px;
+  color: var(--primary-color);
 }
 
 .list-item .avatar {
-  /* TODO: Add avatar styles in list items */
-  /* HINT: Use width, height, border-radius, margin-right, and object-fit */
+  margin-left: auto;
 }
 
 /* Form Styles */
 .form-group {
-  /* TODO: Add form group styles */
-  /* HINT: Add margin-bottom */
+   margin-bottom: 20px;
 }
 
 .form-label {
-  /* TODO: Add form label styles */
-  /* HINT: Use display, margin, and font-weight */
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
 }
 
-.form-input {
-  /* TODO: Add form input styles */
-  /* HINT: Use width, padding, border, border-radius, font-size, transition */
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: var(--body-bg);
 }
 
-.form-input:focus {
-  /* TODO: Add focus styles for form inputs */
-  /* HINT: Use outline, border-color, and box-shadow */
-}
-
-.form-select {
-  /* TODO: Add form select styles */
-  /* HINT: Similar to form-input, with additional background-color */
+.form-input:focus, .form-select:focus, .form-textarea:focus  {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
 }
 
 .form-textarea {
-  /* TODO: Add textarea styles */
-  /* HINT: Similar to form-input, with additional min-height and resize properties */
+  min-height: 120px;
+  resize: vertical;
 }
 
 /* Table Styles */
 .table-container {
-  /* TODO: Add table container styles */
-  /* HINT: Use overflow-x and margin */
+  overflow-x: auto;
+  margin: 20px 0;
 }
 
 .table {
-  /* TODO: Add table styles */
-  /* HINT: Use width, border-collapse, border-spacing */
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .table th,
 .table td {
-  /* TODO: Add table cell styles */
-  /* HINT: Use padding, text-align, border-bottom */
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .table th {
-  /* TODO: Add table header styles */
-  /* HINT: Use background-color, font-weight, cursor */
+  background-color: var(--light-gray-color);
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .table th:hover {
-  /* TODO: Add hover styles for table headers */
-  /* HINT: Change background-color */
+  background-color: #d8dde2;
 }
 
 .table tr {
-  /* TODO: Add table row styles */
-  /* HINT: Use transition */
+  transition: background-color 0.2s;
 }
 
 .table tr:hover {
-  /* TODO: Add hover styles for table rows */
-  /* HINT: Change background-color with rgba for transparency */
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Badge Styles */
