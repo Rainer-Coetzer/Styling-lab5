@@ -1,0 +1,1 @@
+Had an issue with the calender and emoji compenent not resizing properly however works perfectly on mobile
